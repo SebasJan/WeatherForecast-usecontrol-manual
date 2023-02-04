@@ -1,12 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Metadata.Ecma335;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WheaterForecast_UserControl_Manual.UserControls;
 
@@ -15,13 +8,11 @@ namespace WheaterForecast_UserControl_Manual
     public partial class Form1 : Form
     {
         private string[] locations;
-        private List<WeatherForecastUserControl> weatherForecastUserControls;
         public Form1()
         {
             InitializeComponent();
             // set the layout panel to be scrollable
             this.forecastFlowLayoutPanel.AutoScroll = true;
-            this.weatherForecastUserControls = new List<WeatherForecastUserControl>();
             this.locations = new string[] { "London", "Paris", "New York", "Tokyo", "Moscow", "Berlin", "Rome", "Madrid", "Barcelona", "Bucharest", "Warsaw", "Vienna", "Budapest", "Prague", "Brussels", "Amsterdam", "Stockholm", "Oslo", "Helsinki", "Dublin", "Copenhagen", "Athens", "Lisbon", "Reykjavik", "Luxembourg", "Zurich", "Geneva", "Ljubljana", "Bratislava", "Valletta", "Vaduz", "Monaco", "Andorra la Vella", "San Marino", "Vatican City" };
         }
 
