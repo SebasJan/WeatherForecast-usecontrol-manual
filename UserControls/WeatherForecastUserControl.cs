@@ -5,11 +5,15 @@ namespace WheaterForecast_UserControl_Manual.UserControls
 {
     public partial class WeatherForecastUserControl : UserControl
     {
-        public Forecast forecast;
+        private Forecast forecast;
+        public Forecast Forecast
+        {
+            get { return forecast; }
+        }
         public WeatherForecastUserControl(Forecast forecast)
         {
-            this.forecast = forecast;
-            InitializeComponent();                      
+            InitializeComponent();
+            this.forecast = forecast;                               
         }
 
         private void WeatherForecastUserControl_Load(object sender, EventArgs e)
@@ -22,8 +26,8 @@ namespace WheaterForecast_UserControl_Manual.UserControls
             // set the values of the labels
             this.dateLabel.Text = forecast.Date.ToString("dd/MM/yyyy HH:mm:ss");
             this.locationLabel.Text = forecast.Location;
-            this.highLabel.Text = forecast.High.ToString() + "°C";
-            this.lowLabel.Text = forecast.Low.ToString() + "°C";
+            this.highLabel.Text = forecast.HighTemperature.ToString() + "°C";
+            this.lowLabel.Text = forecast.LowTemperature.ToString() + "°C";
         }
 
         public void UpdateForecast(Forecast forecast)

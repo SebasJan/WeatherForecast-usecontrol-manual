@@ -46,13 +46,13 @@ namespace WheaterForecast_UserControl_Manual
             foreach (WeatherForecastUserControl weatherForecastUserControl in this.forecastFlowLayoutPanel.Controls)
             {
                 // get the forecast from the UC
-                Forecast forecast = weatherForecastUserControl.forecast;
+                Forecast forecast = weatherForecastUserControl.Forecast;
 
                 Random random = new Random();
 
                 // update the forecast 
-                forecast.High = random.Next(0, 40);
-                forecast.Low = random.Next(0, 40);
+                forecast.HighTemperature = random.Next(0, 40);
+                forecast.LowTemperature = random.Next(0, 40);
                 forecast.Date = DateTime.Now;
 
                 weatherForecastUserControl.UpdateForecast(forecast);

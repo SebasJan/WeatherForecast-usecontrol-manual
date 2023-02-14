@@ -10,15 +10,15 @@ namespace WheaterForecast_UserControl_Manual
     {
         public DateTime Date { get; set; }
         public string Location { get; set; }
-        public double High { get; set; }
-        public double Low { get; set; }
+        public double HighTemperature { get; set; }
+        public double LowTemperature { get; set; }
 
         public Forecast(DateTime date, string location, double high, double low)
         {
             Date = date;
             Location = location;
-            High = high;
-            Low = low;
+            HighTemperature = high;
+            LowTemperature = low;
         }
     }
 }
