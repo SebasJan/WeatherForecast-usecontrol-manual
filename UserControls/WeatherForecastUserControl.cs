@@ -30,9 +30,8 @@ namespace WheaterForecast_UserControl_Manual.UserControls
             this.lowLabel.Text = forecast.LowTemperature.ToString() + "°C";
         }
 
-        public void UpdateForecast(Forecast forecast)
+        public void RefreshForecast()
         {
-            this.forecast = forecast;
             UpdateLabels();
         }
     }

@@ -55,7 +55,7 @@ namespace WheaterForecast_UserControl_Manual
                 forecast.LowTemperature = random.Next(0, 40);
                 forecast.Date = DateTime.Now;
 
-                weatherForecastUserControl.UpdateForecast(forecast);
+                weatherForecastUserControl.RefreshForecast();
             }
         }
     }
